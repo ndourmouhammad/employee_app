@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { EmployeeComponent } from './employee/employee.component';
+import { Employee } from './models/employee.model';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,14 @@ import { EmployeeComponent } from './employee/employee.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'employee_app';
+  employee: Employee = {
+    _id: "5e9f9a7b6d7b6d7b6d7b6d7b",
+    name: "Mouhammad Ndour",
+    department: "IT",
+    level: "J"
+  };
+
+  onNameClick(employeId: string) {
+    console.log(employeId)
+  }
 }
